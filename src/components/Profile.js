@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import props from "./Profile-data";
+// import props from "./Profile-data";
 import Button from "./Button";
 import Icon from "./icon";
 
@@ -44,7 +44,7 @@ const ProfileStyled = styled.div`
   }
 `;
 
-function Profile() {
+function Profile(props) {
   const {
     name,
     login,

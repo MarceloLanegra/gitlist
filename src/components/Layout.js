@@ -5,12 +5,14 @@ const LayoutStyled = styled.main`
   max-inline-size: 75rem;
   padding-inline: 1.25rem;
   margin: auto;
+  padding-block: 1.5rem;
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 17.375rem 1fr;
     grid-template-rows: auto 1fr;
     column-gap: 2rem;
     grid-template-areas: "profile filters" "profile repo-list";
+    padding: 2.5rem;
   }
 `;
 

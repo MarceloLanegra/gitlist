@@ -9,14 +9,13 @@ const InputStyled = styled.input`
   padding-block: 0.5rem;
   color: var(--white);
   flex: 1;
+  &:focus {
+    outline: var(--primary) solid 1px;
+  }
+  @media screen and (prefers-color-scheme: light) {
+    background-color: var(--white);
+    color: var(--black-2);
+  }
 `;
-
-// function Input() {
-//   return (
-//     <InputStyled>
-//       Input
-//     </InputStyled>
-//   )
-// }
 
 export default InputStyled

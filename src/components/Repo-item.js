@@ -7,7 +7,7 @@ const RepoItemStyled = styled.div`
   flex-direction: column;
   gap: 1rem;
   padding-block-start: 2rem;
-  padding-block-end: 1rem;
+  padding-block-end: 2rem;
   border-block-end: 1px solid var(--grey);
   &:last-child {
     border-block-end: none;
@@ -35,6 +35,7 @@ const RepoItemStyled = styled.div`
   .topicList {
     display: flex;
     gap: 0.25rem;
+    flex-wrap: wrap;
   }
   .topicItem {
     color: var(--primary);
@@ -58,6 +59,15 @@ const RepoItemStyled = styled.div`
       text-transform: uppercase;
     }
   }
+  @media screen and (min-width: 768px) {
+    padding-block-end: 1rem;
+  }
+  @media screen and (prefers-color-scheme: light) {
+    .topicItem {
+      color: var(--primary);
+      background-color: #d5e8ff;
+    }
+  }
 `;
 
 function RepoItem(props) {
@@ -69,7 +79,7 @@ function RepoItem(props) {
   return (
     <RepoItemStyled>
       <h3 className="title">
-        <a href={props.html_url} target="_blank">
+        <a href={props.html_url} target="_blank" rel="noopener noreferrer">
           {props.name}
         </a>
         {!props.private ? <span className="public">Public</span> : null}
@@ -80,14 +90,16 @@ function RepoItem(props) {
       {props.topics.length ? (
         <div className="topicList">
           {props.topics.map((item) => (
-            <span className="topicItem" key={item}>{item}</span>
+            <span className="topicItem" key={item}>
+              {item}
+            </span>
           ))}
         </div>
       ) : null}
       <div className="details">
         {props.language ? <Language name={props.language} /> : null}
         <span className="details-item">
-          <Icon name="star" color="var(--grey)"/>
+          <Icon name="star" color="var(--grey)" />
           <span>{props.stargazers_count}</span>
         </span>
         <span className="details-item">

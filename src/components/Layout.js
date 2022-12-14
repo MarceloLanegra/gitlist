@@ -6,6 +6,9 @@ const LayoutStyled = styled.main`
   padding-inline: 1.25rem;
   margin: auto;
   padding-block: 1.5rem;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* gap: 2.5rem; */
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 17.375rem 1fr;

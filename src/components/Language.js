@@ -15,19 +15,22 @@ const LanguageStyled = styled.div`
 `;
 
 const languages = {
-  html:{
-    color: 'red'
+  html: {
+    color: "red",
   },
-  css:{
-    color: 'green'
+  css: {
+    color: "green",
   },
   javascript: {
-    color: 'yellow'
+    color: "yellow",
   },
-  ruby:{
-    color: 'purple'
-  }
-}
+  ruby: {
+    color: "purple",
+  },
+  java: {
+    color: "orange",
+  },
+};
 
 function Language({name}) {
   const formattedName = name.toLowerCase()

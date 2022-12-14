@@ -32,6 +32,12 @@ body {
   margin: 0;
 }
 
+@media screen and (prefers-color-scheme:light) {
+  body {
+    background-color: var(--white);
+  }
+}
+
 `;
 
 export default GlobalStylesStyled
